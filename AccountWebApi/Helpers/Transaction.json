@@ -1,0 +1,98 @@
+[
+  {
+    "Id": 1,
+    "AccountNumber": "123-2223-212",
+    "AccountName": "Current Account",
+    "Currency": "SGD",
+    "TransactionType": "Credit",
+    "Amount": 9540.98
+  },
+  {
+    "Id": 2,
+    "AccountNumber": "123-2223-212",
+    "AccountName": "Current Account",
+    "Currency": "SGD",
+    "TransactionType": "Credit",
+    "Amount": 7497.82
+  },
+  {
+    "Id": 3,
+    "AccountNumber": "123-2223-212",
+    "AccountName": "Current Account",
+    "Currency": "SGD",
+    "TransactionType": "Credit",
+    "Amount": 5564.79
+  },
+  {
+    "Id": 4,
+    "AccountNumber": "123-2223-212",
+    "AccountName": "Current Account",
+    "Currency": "SGD",
+    "TransactionType": "Credit",
+    "Amount": 8136.18
+  },
+  {
+    "Id": 5,
+    "AccountNumber": "123-2223-212",
+    "AccountName": "Current Account",
+    "Currency": "SGD",
+    "TransactionType": "Credit",
+    "Amount": 9442.46
+  },
+  {
+    "Id": 6,
+    "AccountNumber": "123-2223-212",
+    "AccountName": "Current Account",
+    "Currency": "SGD",
+    "TransactionType": "Credit",
+    "Amount": 7614.45
+  },
+  {
+    "Id": 7,
+    "AccountNumber": "123-2223-212",
+    "AccountName": "Current Account",
+    "Currency": "SGD",
+    "TransactionType": "Credit",
+    "Amount": 3311.55
+  },
+  {
+    "Id": 8,
+    "AccountNumber": "123-2223-212",
+    "AccountName": "Current Account",
+    "Currency": "SGD",
+    "TransactionType": "Credit",
+    "Amount": 9186.09
+  },
+  {
+    "Id": 9,
+    "AccountNumber": "123-2223-212",
+    "AccountName": "Current Account",
+    "Currency": "SGD",
+    "TransactionType": "Credit",
+    "Amount": 1905.86
+  },
+  {
+    "Id": 10,
+    "AccountNumber": "123-2223-212",
+    "AccountName": "Current Account",
+    "Currency": "SGD",
+    "TransactionType": "Credit",
+    "Amount": 197.78
+  },
+  {
+    "Id": 11,
+    "AccountNumber": "123-2223-212",
+    "AccountName": "Current Account",
+    "Currency": "SGD",
+    "TransactionType": "Credit",
+    "Amount": 8430.49
+  },
+  {
+    "Id": 12,
+    "AccountNumber": "123-2223-212",
+    "AccountName": "Current Account",
+    "Currency": "SGD",
+    "TransactionType": "Credit",
+    "Amount": 8.33
+  }
+]

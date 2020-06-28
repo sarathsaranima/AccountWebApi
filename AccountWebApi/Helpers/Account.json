@@ -1,0 +1,101 @@
+[
+  {
+    "Id": 1,
+    "CustomerId": 101,
+    "AccountNumber": "585309209",
+    "AccountName": "SGSavings726",
+    "AccountType": "Savings",
+    "Currency": "SGD",
+    "Balance": 84327.51
+  },
+  {
+    "Id": 2,
+    "CustomerId": 101,
+    "AccountNumber": "791066619",
+    "AccountName": "AUSavings933",
+    "AccountType": "Savings",
+    "Currency": "AUD",
+    "Balance": 88005.93
+  },
+  {
+    "Id": 3,
+    "CustomerId": 101,
+    "AccountNumber": "321143048",
+    "AccountName": "AUCurrent433",
+    "AccountType": "Current",
+    "Currency": "AUD",
+    "Balance": 38010.62
+  },
+  {
+    "Id": 4,
+    "CustomerId": 102,
+    "AccountNumber": "347786244",
+    "AccountName": "SGCurrent166",
+    "AccountType": "Current",
+    "Currency": "SGD",
+    "Balance": 50664.65
+  },
+  {
+    "Id": 5,
+    "CustomerId": 102,
+    "AccountNumber": "680168913",
+    "AccountName": "AUCurrent374",
+    "AccountType": "Current",
+    "Currency": "AUD",
+    "Balance": 41327.28
+  },
+  {
+    "Id": 6,
+    "CustomerId": 102,
+    "AccountNumber": "136056165",
+    "AccountName": "AUSavings938",
+    "AccountType": "Savings",
+    "Currency": "AUD",
+    "Balance": 48928.79
+  },
+  {
+    "Id": 7,
+    "CustomerId": 103,
+    "AccountNumber": "453963528",
+    "AccountName": "SGSavings842",
+    "AccountType": "Savings",
+    "Currency": "SGD",
+    "Balance": 72117.53
+  },
+  {
+    "Id": 8,
+    "CustomerId": 103,
+    "AccountNumber": "334666982",
+    "AccountName": "AUSavings253",
+    "AccountType": "Savings",
+    "Currency": "AUD",
+    "Balance": 20588.16
+  },
+  {
+    "Id": 9,
+    "CustomerId": 103,
+    "AccountNumber": "793949180",
+    "AccountName": "AUCurrent754",
+    "AccountType": "Current",
+    "Currency": "AUD",
+    "Balance": 88794.48
+  },
+  {
+    "Id": 10,
+    "CustomerId": 104,
+    "AccountNumber": "768759901",
+    "AccountName": "SGCurrent294",
+    "AccountType": "Current",
+    "Currency": "SGD",
+    "Balance": 5906.55
+  },
+  {
+    "Id": 11,
+    "CustomerId": 104,
+    "AccountNumber": "847257972",
+    "AccountName": "AUCurrent591",
+    "AccountType": "Current",
+    "Currency": "AUD",
+    "Balance": 92561.68
+  }
+]
