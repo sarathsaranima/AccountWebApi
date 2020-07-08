@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
-using AccountWebApi.Model;
 using System.Linq;
-using AccountWebApi.Contract;
+using AccountWebApi.Contract.Contracts;
+using AccountWebApi.Entities.Model;
 
 namespace AccountWebApiTest.Fake
 {

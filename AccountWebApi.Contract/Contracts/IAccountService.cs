@@ -1,7 +1,9 @@
-﻿using AccountWebApi.Model;
+﻿using AccountWebApi.Entities.Model;
+using System;
 using System.Collections.Generic;
+using System.Text;
 
-namespace AccountWebApi.Contract
+namespace AccountWebApi.Contract.Contracts
 {
     /// <summary>
     /// This is the contract defining account related operations.

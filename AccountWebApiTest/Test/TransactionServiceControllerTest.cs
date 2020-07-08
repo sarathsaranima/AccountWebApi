@@ -1,6 +1,8 @@
-﻿using AccountWebApi.Contract;
+﻿using AccountWebApi.Contract.Contracts;
 using AccountWebApi.Controllers;
-using AccountWebApi.Model;
+using AccountWebApi.Entities.Model;
+using AccountWebApi.Logger.Contract;
+using AccountWebApi.Logger.Service;
 using AccountWebApiTest.Fake;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -17,7 +19,7 @@ namespace AccountWebApiTest.Test
     {
         TransactionServiceController _controller;
         ITransactionService _service;
-        ILogger<TransactionServiceController> _logger = new Logger<TransactionServiceController>(new NullLoggerFactory());
+        ILoggerManager _logger = new LoggerManager();
 
         public TransactionServiceControllerTest()
         {
@@ -26,28 +28,29 @@ namespace AccountWebApiTest.Test
         }
 
         [Fact]
-        public void GetByAccount_UnknownAccount_ReturnsNotFoundResult()
+        public void GetByAccount_UnknownAccount_ReturnsNoResult()
         {
             // Act
-            var notFoundResult = _controller.GetTransactions("xxxxxxxxxx");
+            var notFoundResult = _controller.GetTransactions("xxxxxxxxxx") as ActionResult<List<AccountTransaction>>;
+            var result = notFoundResult.Result as OkObjectResult;
+            var transactions = result.Value as List<AccountTransaction>;
 
             // Assert
-            Assert.NotNull(notFoundResult);
-            Assert.IsType<NotFoundObjectResult>(notFoundResult);
+            Assert.Empty(transactions);
         }
 
         [Fact]
-        public void GetByAccount_ExistingAccount_ReturnsOkResult()
+        public void GetByAccount_ExistingAccount_ReturnsResult()
         {
             // Arrange
             string accountNbr = "123-2223-212";
             // Act
-            var okResult = _controller.GetTransactions(accountNbr);
+            var okResult = _controller.GetTransactions(accountNbr) as ActionResult<List<AccountTransaction>>;
+            var result = okResult.Result as OkObjectResult;
+            var transactions = result.Value as List<AccountTransaction>;
 
             // Assert
-            Assert.NotNull(okResult);
-            Assert.IsType<OkObjectResult>(okResult);
-            Assert.IsAssignableFrom<IEnumerable<AccountTransaction>>((okResult as OkObjectResult).Value);
+            Assert.NotEmpty(transactions);
         }
     }
 }

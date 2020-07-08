@@ -1,11 +1,15 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Text;
 
-namespace AccountWebApi.Model
+namespace AccountWebApi.Entities.Model
 {
     /// <summary>
     /// This is the model class for transactions.
     /// </summary>
+    [Table("Transactions")]
     public class AccountTransaction
     {
         [Key]

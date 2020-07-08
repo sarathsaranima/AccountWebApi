@@ -16,6 +16,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\AccountWebApi.Logger\AccountWebApi.Logger.csproj" />
+    <ProjectReference Include="..\AccountWebApi.Service\AccountWebApi.Service.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Content Update="Helpers\Account.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

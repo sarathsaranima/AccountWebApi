@@ -21,6 +21,7 @@ method of AccountDBContext
 - Micrososft.EntityFrameworkCore.Sqlite(3.1.5)
 - Micrososft.EntityFrameworkCore.Tools(3.1.5)
 - SwashBuckle.AspNetCore(5.5.1)
+- Nlog.Extension.Logging(1.6.4)
 
 #### Swagger
 
@@ -31,6 +32,10 @@ Api can be tested out in Swagger with the below sample data.
 
 - CustomerId: 101, 102, 103, 104
 - AccountNumber : 123-2223-212
+
+#### Logging
+
+Custom logger is implemented using Nlog. Log settings can be configured unde nlog.config. 
 
 
 #### Unit Testing

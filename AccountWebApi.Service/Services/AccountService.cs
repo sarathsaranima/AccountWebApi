@@ -1,9 +1,11 @@
-﻿using AccountWebApi.Contract;
-using AccountWebApi.Model;
+﻿using AccountWebApi.Contract.Contracts;
+using AccountWebApi.Entities.Context;
+using AccountWebApi.Entities.Model;
+using AccountWebApi.Exceptions;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace AccountWebApi.Services
+namespace AccountWebApi.Service.Services
 {
     /// <summary>
     /// This class defines all the operations perofomed on account.
@@ -29,11 +31,13 @@ namespace AccountWebApi.Services
         /// <returns>Returns IEnumerable of Account</returns>
         public IEnumerable<Account> GetAccountsByCustomerId(int customerId)
         {
-            return _context.Accounts.Where(x => x.CustomerId == customerId);
+            if (customerId <= 0)
+                throw new CustomAccountException(400, "Invalid Request");
+            var accounts = _context.Accounts.Where(x => x.CustomerId == customerId);
+            if (accounts != null && accounts.Count() > 0)
+                return accounts;
+            else
+                throw new CustomAccountException(404, "No Records Found");
         }
     }
 }
-
-
-
- 

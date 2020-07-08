@@ -1,7 +1,12 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using System;
+using System.Collections.Generic;
 using System.Reflection;
+using System.Text;
+using AccountWebApi.Entities.Model;
+using Microsoft.EntityFrameworkCore;
 
-namespace AccountWebApi.Model
+
+namespace AccountWebApi.Entities.Context
 {
     /// <summary>
     /// This is the db context class for database interactions.
@@ -10,7 +15,7 @@ namespace AccountWebApi.Model
     {
         public DbSet<Account> Accounts { get; set; }
         public DbSet<AccountTransaction> Transactions { get; set; }
-        
+
         /// <summary>
         /// This method is for configuring the connection to the database.
         /// </summary>
@@ -22,7 +27,7 @@ namespace AccountWebApi.Model
             });
             base.OnConfiguring(optionsBuilder);
         }
-        
+
         /// <summary>
         /// This method is used to map and configure the tables.
         /// </summary>

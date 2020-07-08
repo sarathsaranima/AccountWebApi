@@ -8,7 +8,8 @@ namespace AccountWebApi
     {
         public static void Main(string[] args)
         {
-            // The below function call is to initialise the SQLite database each time when the application is started
+            // The below function call is to initialise the SQLite database each 
+            // time when the application is started.
             Setup.Initialize();
             CreateHostBuilder(args).Build().Run();
         }

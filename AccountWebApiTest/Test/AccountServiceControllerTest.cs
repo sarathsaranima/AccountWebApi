@@ -1,12 +1,12 @@
 ﻿using AccountWebApi.Controllers;
-using AccountWebApi.Contract;
-using AccountWebApi.Model;
 using System.Collections.Generic;
 using AccountWebApiTest.Fake;
 using Xunit;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Logging.Abstractions;
+using AccountWebApi.Contract.Contracts;
+using AccountWebApi.Entities.Model;
+using AccountWebApi.Logger.Contract;
+using AccountWebApi.Logger.Service;
 
 namespace AccountWebApiTest.Test
 {
@@ -17,7 +17,7 @@ namespace AccountWebApiTest.Test
     {
         AccountServiceController _controller;
         IAccountService _service;
-        ILogger<AccountServiceController> _logger = new Logger<AccountServiceController>(new NullLoggerFactory());
+        ILoggerManager _logger = new LoggerManager();
 
         public AccountServiceControllerTest()
         {
@@ -26,24 +26,27 @@ namespace AccountWebApiTest.Test
         }
 
         [Fact]
-        public void GetById_UnknownId_ReturnsNotFoundResult()
+        public void GetById_UnknownId_ReturnsNoResult()
         {
             // Act
-            var notFoundResult = _controller.GetAccounts(500);
+            var notFoundResult = _controller.GetAccounts(500) as ActionResult<List<Account>>;
+            var result = notFoundResult.Result as OkObjectResult;
+            var accounts = result.Value as List<Account>;
 
             // Assert
-            Assert.IsType<NotFoundObjectResult>(notFoundResult);
+            Assert.Empty(accounts);
         }
 
         [Fact]
-        public void GetById_ExistingId_ReturnsOkResult()
+        public void GetById_ExistingId_ReturnsResult()
         {
             // Act
-            var okResult = _controller.GetAccounts(101);
+            var okResult = _controller.GetAccounts(101) as ActionResult<List<Account>>;
+            var result = okResult.Result as OkObjectResult;
+            var accounts = result.Value as List<Account>;
 
             // Assert
-            Assert.IsType<OkObjectResult>(okResult);
-            Assert.IsAssignableFrom<IEnumerable<Account>>((okResult as OkObjectResult).Value);
+            Assert.Equal(2, accounts.Count);
         }
     }
 }
